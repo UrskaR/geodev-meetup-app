@@ -1,4 +1,4 @@
-# geodev-meetup-app
+# sample Shiny app
 
 
 Assuming you have all the packages installed*, starting with `shiny`, you can run this piece of code and you're off.

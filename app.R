@@ -7,6 +7,7 @@ header <- dashboardHeader(title = "geodev")
 
 sidebar <- dashboardSidebar(collapsed = TRUE,
   sidebarMenu(
+    br(),
   actionButton(inputId = "removeMarkers", label = "Remove markers", icon = icon("remove"), width = "85%")
   )
 )
@@ -22,7 +23,7 @@ body <- dashboardBody(
         includeCSS("styles.css")
       ),
       leafletOutput("map")
-  ) 
+  )
 )
 
 ui <- dashboardPage(header, sidebar, body)
@@ -32,7 +33,7 @@ server <- function(input, output) {
   output$map <- renderLeaflet({
     leaflet() %>% 
       addTiles() %>%
-      # addProviderTiles(provider = providers$OpenStreetMap) %>%
+      # addProviderTiles(provider = providers$Stamen.Terrain) %>%
       setView(lng = 14.815333, lat = 46.119944, zoom = 7) %>%
       addMiniMap(
         tiles = providers$OpenStreetMap,

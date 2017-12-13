@@ -15,9 +15,9 @@ body <- dashboardBody(
   # 
   # div(class="outer",
   #     tags$head(
-        # Include  custom CSS
-        # includeCSS("styles.css")
-      # ),
+  # # Include  custom CSS
+  # includeCSS("styles.css")
+  # ),
       leafletOutput("map")
   # )
 )

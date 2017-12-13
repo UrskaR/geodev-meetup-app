@@ -9,5 +9,5 @@ shiny::runGitHub(repo = "geodev-meetup-app", username = "zkuralt")
 `*` you can install packages listed in the [`app.R`](https://github.com/zkuralt/geodev-meetup-app/blob/master/app.R) using something along the lines of
 
 ```
-install.packages(c("shiny", "shinydashboard", "leaflet", "shinyjs"))
+install.packages(c("shinydashboard", "leaflet", "rsconnect"))
 ```

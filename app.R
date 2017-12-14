@@ -4,10 +4,11 @@ library(leaflet)
 header <- dashboardHeader(title = "geodev")
 
 sidebar <- dashboardSidebar(collapsed = TRUE
-  # sidebarMenu(
-  #   br(),
-  # actionButton(inputId = "removeMarkers", label = "Remove markers", icon = icon("remove"), width = "85%")
-  # )
+                            # ,
+                            # sidebarMenu(
+                            #   br(),
+                            #   actionButton(inputId = "removeMarkers", label = "Remove markers", icon = icon("remove"), width = "85%")
+                            # )
 )
 
 body <- dashboardBody(
@@ -15,9 +16,9 @@ body <- dashboardBody(
   # 
   # div(class="outer",
   #     tags$head(
-  # # Include  custom CSS
-  # includeCSS("styles.css")
-  # ),
+  #       # Include  custom CSS
+  #       includeCSS("styles.css")
+  #     ),
       leafletOutput("map")
   # )
 )
@@ -28,7 +29,7 @@ server <- function(input, output) {
   
   output$map <- renderLeaflet({
     leaflet() %>% 
-      addTiles() 
+      addTiles()
       # addProviderTiles(provider = providers$Stamen.Terrain) %>%
       # setView(lng = 14.815333, lat = 46.119944, zoom = 7) %>%
       # addMiniMap(
@@ -45,7 +46,7 @@ server <- function(input, output) {
   #   leafletProxy(mapId = "map", data = pnt) %>%
   #     addCircleMarkers(group = "markers", popup = paste(paste("lat:", click$lat, "lng:", click$lng, sep = " ")))
   # })
-
+  # 
   # observeEvent(input$removeMarkers, {
   #   leafletProxy(mapId = "map") %>%
   #     clearMarkers()

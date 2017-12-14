@@ -29,7 +29,7 @@ server <- function(input, output) {
   
   output$map <- renderLeaflet({
     leaflet() %>% 
-      addTiles()
+      addTiles() # add default tiles (comment this line when using code below)
       # addProviderTiles(provider = providers$Stamen.Terrain) %>%
       # setView(lng = 14.815333, lat = 46.119944, zoom = 7) %>%
       # addMiniMap(
@@ -39,7 +39,7 @@ server <- function(input, output) {
       #   icon="fa-crosshairs", title="Locate Me",
       #   onClick=JS("function(btn, map){ map.locate({setView: true}); }")))
   })
-  
+  # # Add marker when one clicks on map
   # observeEvent(input$map_click, {
   #   click <- input$map_click
   #   pnt <- data.frame(lat = click$lat, lng = click$lng)
@@ -47,6 +47,7 @@ server <- function(input, output) {
   #     addCircleMarkers(group = "markers", popup = paste(paste("lat:", click$lat, "lng:", click$lng, sep = " ")))
   # })
   # 
+  # # Remove markers when button is pressed
   # observeEvent(input$removeMarkers, {
   #   leafletProxy(mapId = "map") %>%
   #     clearMarkers()

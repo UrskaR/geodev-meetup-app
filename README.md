@@ -1,17 +1,9 @@
 # sample Shiny app
 
-
-Assuming you have all the packages installed*, starting with `shiny`, you can run this piece of code and you're off.
-```r
-shiny::runGitHub(repo = "geodev-meetup-app", username = "zkuralt")
-```
-
-`*` you can install packages listed in the [`app.R`](https://github.com/zkuralt/geodev-meetup-app/blob/master/app.R) using something along the lines of
-
+First, you need to install the packages using the code below.
 ```
 install.packages(c("shinydashboard", "leaflet", "rsconnect"))
-```
-
+```      
 In order to build the app I recommend uncommenting chunks of code step by step. After each step you can run the app to see what you have done.   
 
 We already have ```leafletOutput("map") ``` in the dashboardBody on the UI side and

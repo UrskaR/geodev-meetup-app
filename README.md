@@ -14,7 +14,7 @@ install.packages(c("shinydashboard", "leaflet", "rsconnect"))
 
 In order to build the app I recommend uncommenting chunks of code step by step. After each step you can run the app to see what you have done.   
 
-At first, we already have ```leafletOutput("map") ``` in the dashboardBody on the UI side and
+We already have ```leafletOutput("map") ``` in the dashboardBody on the UI side and
 ```output$map <- renderLeaflet({ leaflet() %>% addTiles() })``` on the server side of the app.  
 
 Now we want the map to fill the screen. We can achieve that through some custom CSS.

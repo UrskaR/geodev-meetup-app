@@ -1,3 +1,5 @@
+# this is a layout that creates dashboard page
+
 library(shinydashboard)
 
 header <- dashboardHeader()
